@@ -4,37 +4,41 @@ const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
 const Manager = require('./lib/manager');
 
-const managerQuestions = [
-    {
-        type: 'input',
-        message: 'Please enter your name',
-        name: 'manager-name',
-    },
-    {
-        type: 'input',
-        message: 'Please enter your id',
-        name: 'id',
-    },
-    {
-        type: 'input',
-        message: 'Please enter your email address',
-        name: 'email',
-    },
-    {
-        type: 'input',
-        message: 'Please enter your office number',
-        name: 'office',
-    },
-    {
-        type: 'list',
-        message: 'Do you want to add an employee?',
-        name: 'add-employee',
-        choices: [
-            'Engineer',
-            'Intern'
-        ]
-    },
-];
+const employeeArray = [];
+
+const managerQuestions = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Please enter your name',
+            name: 'manager-name',
+        },
+        {
+            type: 'input',
+            message: 'Please enter your id',
+            name: 'id',
+        },
+        {
+            type: 'input',
+            message: 'Please enter your email address',
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: 'Please enter your office number',
+            name: 'office',
+        },
+        {
+            type: 'list',
+            message: 'Do you want to add an employee?',
+            name: 'add-employee',
+            choices: [
+                'Engineer',
+                'Intern'
+            ]
+        },
+    ]);
+};
 
 const internQuestions = [
     {
