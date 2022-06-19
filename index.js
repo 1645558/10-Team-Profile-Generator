@@ -37,16 +37,54 @@ const managerQuestions = [
 ];
 
 const internQuestions = [
-
+    {
+        type: 'input',
+        message: 'Please enter your name',
+        name: 'intern-name',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your id',
+        name: 'id',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your email address',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your school',
+        name: 'school',
+    },
 ];
 
 const engineerQuestions = [
-
+    {
+        type: 'input',
+        message: 'Please enter your name',
+        name: 'engineer-name',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your id',
+        name: 'id',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your email address',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your Github username',
+        name: 'github',
+    },
 ];
 
 
 function init() {
-    inquirer.prompt(employeeQuestions, managerQuestions, internQuestions, engineerQuestions)
+    inquirer.prompt(managerQuestions, internQuestions, engineerQuestions)
 };
 
 init();
