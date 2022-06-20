@@ -7,6 +7,7 @@ const generateMarkdown = require('./src/generateMarkdown.js')
 
 const employeeArray = [];
 
+//inquirer prompt for asking manager questions
 const managerQuestions = () => {
     return inquirer.prompt([
         {
@@ -39,6 +40,7 @@ const managerQuestions = () => {
         });
 };
 
+//inquirer prompt for adding employee questions
 const addEmployee = () => {
     return inquirer.prompt([
         {
@@ -85,6 +87,7 @@ const addEmployee = () => {
             let { name, id, email, addEmployee, github, school, confirmation } = employees;
             let employee;
 
+            //adding employee info to the array if a new employee is chosen
             if (addEmployee === 'Intern') {
                 employee = new Intern(name, id, email, school);
                 console.log(employee)
@@ -100,6 +103,7 @@ const addEmployee = () => {
         });
 };
 
+//write file function to generate html
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
         if (err) {
@@ -108,3 +112,16 @@ function writeToFile(filename, data) {
         console.log('Success! Generating HTML!')
     });
 };
+
+
+managerQuestions()
+    .then(addEmployee)
+    .then(employeeArray => {
+        return generateMarkdown(employeeArray);
+    })
+    .then(userInput => {
+        return writeToFile(userInput);
+    })
+    .catch(err => {
+        console.log(err);
+    });
