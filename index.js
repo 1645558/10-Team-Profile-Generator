@@ -104,8 +104,8 @@ const addEmployee = () => {
 };
 
 //write file function to generate html
-function writeToFile(filename, data) {
-    fs.writeFile(filename, data, (err) => {
+function writeToFile(data) {
+    fs.writeFile('./output/index.html', data, (err) => {
         if (err) {
             console.log(err)
         }
