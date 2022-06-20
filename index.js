@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
 const Manager = require('./lib/manager');
+const generateMarkdown = require('./src/generateMarkdown.js')
 
 const employeeArray = [];
 
@@ -97,4 +98,13 @@ const addEmployee = () => {
                 return employeeArray
             };
         });
+};
+
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if (err) {
+            console.log(err)
+        }
+        console.log('Success! Generating HTML!')
+    });
 };
