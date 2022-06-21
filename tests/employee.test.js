@@ -36,7 +36,7 @@ describe('Employee', () => {
     describe('getId', () => {
         it('Gets id via getId()', () => {
             const test = 12;
-            const e = new Employee(test);
+            const e = new Employee('Trex', test);
             expect(e.getId()).toBe(test);
         });
     });
@@ -44,7 +44,7 @@ describe('Employee', () => {
     describe('getEmail', () => {
         it('Gets email via getEmail()', () => {
             const test = 'Fred@me.com';
-            const e = new Employee(test);
+            const e = new Employee('Trex', 1, test);
             expect(e.getEmail()).toBe(test);
         });
     });
@@ -52,7 +52,7 @@ describe('Employee', () => {
     describe('getRole', () => {
         it('Gets role via getRole()', () => {
             const test = 'Employee';
-            const e = new Employee(test);
+            const e = new Employee('Fred', 1, 'Fred@me.com');
             expect(e.getRole()).toBe(test);
         });
     });

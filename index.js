@@ -71,11 +71,13 @@ const addEmployee = () => {
             type: 'input',
             message: 'Please enter your employees school',
             name: 'school',
+            when: (input) => input.adding === 'Intern', 
         },
         {
             type: 'input',
             message: 'Please enter your employees Github username',
             name: 'github',
+            when: (input) => input.adding === 'Engineer',
         },
         {
             type: 'confirm',
