@@ -28,4 +28,52 @@ function generateMarkdown() {
     `
 }
 
+const generateManager = manager => {
+    return `
+    <div class="card">
+        <div class="card-header">
+            <h3>${manager.name}</h3>
+        </div>
+        <div class="card-body">
+            <p class="id">ID: ${manager.id}</p>
+            <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+            <p class="office">Office Number: ${manager.office}</p>
+
+        </div>
+    </div>
+    `
+}
+
+const generateEngineer = engineer => {
+    return `
+    <div class="card">
+        <div class="card-header">
+            <h3>${engineer.name}</h3>
+         </div>
+        <div class="card-body">
+            <p class="id">ID: ${engineer.id}</p>
+            <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+            <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+
+         </div>
+     </div>
+    `
+}
+
+const generateIntern = intern => {
+    return `
+    <div class="card">
+        <div class="card-header">
+              <h3>${intern.name}</h3>
+         </div>
+         <div class="card-body">
+             <p class="id">ID: ${intern.id}</p>
+             <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+             <p class="school">School: ${intern.school}</p>
+
+         </div>
+     </div>
+    `
+}
+
 module.exports = generateMarkdown;
