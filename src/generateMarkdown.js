@@ -1,6 +1,6 @@
-function generateMarkdown() {
+function generateMain(employees) {
     return `
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,15 @@ function generateMarkdown() {
 <body>
     <header>
         <nav class="navbar">
-            <span>Team Profile</span>
+            <div class="mx-auto">
+                <span class="navbar-brand mb-0 h1">Team Profile</span>
+            </div>
         </nav>
     </header>
     <main>
         <div class="container">
             <div>
-
+            ${employees}
             </div>
         </div>
     </main>
@@ -75,5 +77,37 @@ const generateIntern = intern => {
      </div>
     `
 }
+
+generateMarkdown = (data) => {
+    employeeArray = [];
+
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+
+
+        if (role === 'Manager') {
+            const mCard = generateManager(employee);
+            employeeArray.push(mCard);
+        };
+
+        if (role === 'Engineer') {
+            const eCard = generateEngineer(employee);
+            employeeArray.push(eCard);
+        };
+
+        if (role === 'Intern') {
+            const iCard = generateIntern(employee);
+            employeeArray.push(iCard);
+        };
+
+    };
+
+    const employees = employeeArray.join('');
+
+    const mainPage = generateMain(employees);
+    return mainPage;
+
+};
 
 module.exports = generateMarkdown;

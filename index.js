@@ -46,7 +46,7 @@ const addEmployee = () => {
         {
             type: 'list',
             message: 'Do you want to add an employee?',
-            name: 'addEmployee',
+            name: 'adding',
             choices: [
                 'Engineer',
                 'Intern',
@@ -84,16 +84,18 @@ const addEmployee = () => {
         }
     ])
         .then(employees => {
-            let { name, id, email, addEmployee, github, school, confirmation } = employees;
+            let { name, id, email, adding, github, school, confirmation } = employees;
             let employee;
 
             //adding employee info to the array if a new employee is chosen
-            if (addEmployee === 'Intern') {
+            if (adding === 'Intern') {
                 employee = new Intern(name, id, email, school);
                 console.log(employee)
-            } else if (addEmployee === 'Engineer') {
+            } else if (adding === 'Engineer') {
                 employee = new Engineer(name, id, email, github);
             };
+
+            employeeArray.push(employee)
 
             if (confirmation) {
                 return addEmployee(employeeArray)
