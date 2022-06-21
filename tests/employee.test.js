@@ -24,4 +24,38 @@ describe('Employee', () => {
         const e = new Employee(test);
         expect(e.email).toBe(test);
     });
+
+    describe('getName', () => {
+        it('Gets name via getName()', () => {
+            const test = 'Fred';
+            const e = new Employee(test);
+            expect(e.getName()).toBe(test);
+        });
+    });
+
+    describe('getName', () => {
+        it('Gets name via getName()', () => {
+            const test = 'Fred';
+            const e = new Employee(test);
+            expect(e.getName()).toBe(test);
+        });
+    });
+
+    describe('getName', () => {
+        it('Gets name via getName()', () => {
+            const test = 'Fred';
+            const e = new Employee(test);
+            expect(e.getName()).toBe(test);
+        });
+    });
+
+    describe('getName', () => {
+        it('Gets name via getName()', () => {
+            const test = 'Fred';
+            const e = new Employee(test);
+            expect(e.getName()).toBe(test);
+        });
+    });
+
+
 });
