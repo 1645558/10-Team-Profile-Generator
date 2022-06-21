@@ -21,7 +21,7 @@ describe('Employee', () => {
 
     It('Can set an email', () => {
         const test = 'Fred@me.com';
-        const e = new Employee(test);
+        const e = new Employee('Trex', 1, test);
         expect(e.email).toBe(test);
     });
 
