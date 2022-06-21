@@ -39,6 +39,7 @@ const generateManager = manager => {
         <div class="card">
             <div class="card-header">
                 <h3>${manager.name}</h3>
+                <h4>Manager</h4>
             </div>
             <div class="card-body">
              <p class="id">ID: ${manager.id}</p>
@@ -58,6 +59,7 @@ const generateEngineer = engineer => {
         <div class="card">
             <div class="card-header">
                 <h3>${engineer.name}</h3>
+                <h4>Engineer</h4>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
@@ -77,6 +79,7 @@ const generateIntern = intern => {
         <div class="card">
             <div class="card-header">
                 <h3>${intern.name}</h3>
+                <h4>Intern</h4>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${intern.id}</p>
