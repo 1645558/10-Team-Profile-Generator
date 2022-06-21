@@ -6,3 +6,7 @@
     background-image: linear-gradient(rgb(224, 146, 224), rgb(169, 58, 169));
 }
 
+.card {
+    box-shadow: 10px 10px 5px lightblue;
+}
+
