@@ -32,8 +32,8 @@ const managerQuestions = () => {
         },
     ])
         .then(managerInput => {
-            const { name, id, email, officeNumber } = managerInput;
-            const manager = new Manager(name, id, email, officeNumber);
+            const { name, id, email, office } = managerInput;
+            const manager = new Manager(name, id, email, office);
 
             employeeArray.push(manager);
             console.log(manager);
@@ -90,7 +90,6 @@ const addEmployee = () => {
             //adding employee info to the array if a new employee is chosen
             if (adding === 'Intern') {
                 employee = new Intern(name, id, email, school);
-                console.log(employee)
             } else if (adding === 'Engineer') {
                 employee = new Engineer(name, id, email, github);
             };

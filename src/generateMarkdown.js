@@ -1,3 +1,4 @@
+//main section for html
 function generateMain(employees) {
     return `
 <!DOCTYPE html>
@@ -28,8 +29,9 @@ function generateMain(employees) {
 </body>
 </html>
     `
-}
+};
 
+//creates card for manager
 const generateManager = manager => {
     return `
     <div class="card">
@@ -44,8 +46,9 @@ const generateManager = manager => {
         </div>
     </div>
     `
-}
+};
 
+//creates card for engineer
 const generateEngineer = engineer => {
     return `
     <div class="card">
@@ -60,8 +63,9 @@ const generateEngineer = engineer => {
          </div>
      </div>
     `
-}
+};
 
+//creates card for intern
 const generateIntern = intern => {
     return `
     <div class="card">
@@ -76,8 +80,9 @@ const generateIntern = intern => {
          </div>
      </div>
     `
-}
+};
 
+//adds cards to array when role is selected
 generateMarkdown = (data) => {
     employeeArray = [];
 
