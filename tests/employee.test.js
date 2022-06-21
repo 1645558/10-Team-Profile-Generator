@@ -4,7 +4,7 @@ describe('Employee', () => {
 
     It('Can create an emploee object', () => {
         const e = new Employee();
-        expect(typeof(e)).toBe('object');
+        expect(typeof (e)).toBe('object');
     });
 
     It('Can set a name', () => {
@@ -33,29 +33,27 @@ describe('Employee', () => {
         });
     });
 
-    describe('getName', () => {
-        it('Gets name via getName()', () => {
-            const test = 'Fred';
+    describe('getId', () => {
+        it('Gets id via getId()', () => {
+            const test = 12;
             const e = new Employee(test);
-            expect(e.getName()).toBe(test);
+            expect(e.getId()).toBe(test);
         });
     });
 
-    describe('getName', () => {
-        it('Gets name via getName()', () => {
-            const test = 'Fred';
+    describe('getEmail', () => {
+        it('Gets email via getEmail()', () => {
+            const test = 'Fred@me.com';
             const e = new Employee(test);
-            expect(e.getName()).toBe(test);
+            expect(e.getEmail()).toBe(test);
         });
     });
 
-    describe('getName', () => {
-        it('Gets name via getName()', () => {
-            const test = 'Fred';
+    describe('getRole', () => {
+        it('Gets role via getRole()', () => {
+            const test = 'Employee';
             const e = new Employee(test);
-            expect(e.getName()).toBe(test);
+            expect(e.getRole()).toBe(test);
         });
     });
-
-
 });
